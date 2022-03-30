@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Get Started{% endblock %}
+
+{% block content %}
+
+    <h2>Getting Started with the Decision Matrix</h2>
+    <p>Hello and welcome to the Decision Matrix. <br>
+        Let's break down a difficult choice into small parts. <br><br>
+        </p>
+
+        <br>
+        Next,<br>
+        What is it you're here to accomplish? <br>
+        For example: <br>
+        <br>
+        I need to...<br>
+        <ul>
+    <li>hire the best candidate.</li>
+    <li>pick out a new dresser.</li>
+    <li>buy a new car.</li>
+    <li>choose where to go to school.</li>
+        </ul><br>
+        What about you?<br>
+
+    <form action="/identify-criteria">
+        My name is...<input type="text" name="current-user"><br>
+        I need to... <input type="text" name="user-decision">
+        <input type="submit">
+    </form>
+    <br>
+    <p><a href="/">Home</a></p>
+
+
+{% endblock %}

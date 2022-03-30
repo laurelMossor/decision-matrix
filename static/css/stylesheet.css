@@ -1,7 +1,17 @@
-h1 {
+
+html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    margin: 10%;
+}
+
+h1 {
 }
 
 p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+footer {
+    font-size: small;
+}
+
