@@ -6,11 +6,8 @@
 
     <h2>Getting Started with the Decision Matrix</h2>
     <p>Hello and welcome to the Decision Matrix. <br>
-        Let's break down a difficult choice into small parts. <br><br>
-        </p>
-
+        Let's break down a difficult choice into small parts.</p> 
         <br>
-        Next,<br>
         What is it you're here to accomplish? <br>
         For example: <br>
         <br>
@@ -23,12 +20,22 @@
         </ul><br>
         What about you?<br>
 
-    <form action="/identify-criteria">
-        My name is...<input type="text" name="current-user"><br>
-        I need to... <input type="text" name="user-decision">
+    <form action="/get-started" value="test">
+        My name is...<input type="text" name="current-user" required="true"><br>
+        I need to... <input type="text" name="user-decision" required="true">
         <input type="submit">
     </form>
     <br>
+    <br>
+    {% if values!= [None,None] and values %}
+
+    Hello {{ name }}, so you are trying to {{  decision  }}?
+
+    {% endif %}
+
+
+    
+    <br><br><br>
     <p><a href="/">Home</a></p>
 
 
