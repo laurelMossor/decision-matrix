@@ -1,12 +1,40 @@
 from flask import Flask, request, render_template
+import json
+import os
+import requests
+
+
 
 app = Flask(__name__)
+
+NEWS_API_KEY = os.environ['NEWS_API_KEY']
+
 
 @app.route("/")
 def home():
     """App landing page"""
 
     return render_template("homepage.html")
+
+@app.route("/news-test-page")
+def test_page():
+    """Testing APIs"""
+
+    url = "https://newsapi.org/v2/top-headlines"
+    payload = {
+        "apikey": NEWS_API_KEY, 
+        "country": "us",
+        "pageSize": "5",
+    }
+
+    res = requests.get(url, params=payload)
+    data = res.json()
+    articles = data["articles"]
+
+
+    return render_template("news-test-page.html", 
+    data=data, 
+    articles=articles)
 
 
 @app.route("/get-started")
